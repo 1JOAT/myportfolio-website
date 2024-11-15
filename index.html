@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praise Oke | Developer</title>
+    <meta name="description" content="Praise Oke - Full Stack Developer specializing in modern web technologies">
+    <link rel="icon" type="image/png" href="https://fav.farm/🚀" />
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- google fonts - manrope looks clean -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- loading animation -->
+    <div class="page-loader">
+        <div class="loader">
+            <div class="loader-text">JOAT</div>
+        </div>
+    </div>
+    
+    <!-- custom cursor (desktop only) -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- nav header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">JOAT</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- mobile menu - slides in from side -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">JOAT</div>
+                <button id="mobile-close" class="mobile-close" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-footer">
+                <div class="mobile-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- hero section with animated bg -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <div class="hero-bg-blur"></div>
+                <canvas id="hero-canvas"></canvas>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-eyebrow">Full Stack Developer</span>
+                    <h1 class="hero-title">
+                        <span class="hero-name">Praise Oke</span>
+                        <span class="hero-job">Building <mark>exceptional</mark> digital experiences</span>
+                    </h1>
+                    <p class="hero-description">I design and develop applications that deliver elegant solutions with cutting-edge technologies.</p>
+                    <div class="hero-cta">
+                        <a href="#experience" class="btn btn-primary">View My Experience</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tech-orbit">
+                        <div class="orbit-ring"></div>
+                        <div class="tech-icon" style="--i:0"><i class="fab fa-react"></i></div>
+                        <div class="tech-icon" style="--i:1"><i class="fab fa-node-js"></i></div>
+                        <div class="tech-icon" style="--i:2"><i class="fab fa-js"></i></div>
+                        <div class="tech-icon" style="--i:3"><i class="fab fa-html5"></i></div>
+                        <div class="tech-icon" style="--i:4"><i class="fab fa-css3-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- work history timeline -->
+        <section id="experience" class="experience">
+            <div class="section-header">
+                <div class="section-title-container">
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="section-subtitle">My professional journey</div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>Present <span> </span></span>
+                        <span>2023</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Senior Software Developer</h3>
+                        <div class="timeline-company">Landcraft</div>
+                        <p>Working as a senior developer focusing on building scalable applications and leading development teams. Currently developing an advanced algorithm to optimize user experiences and system performance.</p>
+                        <div class="timeline-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>TypeScript</span>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2023</span>
+                        <span>2020</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Software Developer</h3>
+                        <div class="timeline-company">Landcraft</div>
+                        <p>Contributed to the development of multiple web and mobile applications, focusing on frontend and backend integration. Implemented real-time features using WebSockets and optimized database queries.</p>
+                        <div class="timeline-tags">
+                            <span>React</span>
+                            <span>React Native</span>
+                            <span>Express</span>
+                            <span>Socket.IO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="current-project">
+                <div class="project-label">Current Focus</div>
+                <h3>Advanced Algorithm Development</h3>
+                <p>Currently working on building a sophisticated algorithm to optimize data processing and enhance user experience across multiple platforms. This project combines complex data structures with machine learning principles to create an adaptive solution.</p>
+            </div>
+        </section>
+
+        <!-- about me + tech stack grid -->
+        <section id="about" class="about">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-title-container">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="section-subtitle">My journey</div>
+                    </div>
+                    
+                    <p>I'm Praise Oke, also known as JOAT (Jack Of All Trades), a passionate full stack developer with expertise in building modern web and mobile applications. I love creating elegant solutions that combine beautiful interfaces with robust functionality.</p>
+                    
+                    <p>With a strong focus on user experience and performance, I develop applications that not only meet business requirements but also delight users. I'm constantly learning and exploring new technologies to stay at the forefront of web development.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-value">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">8+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">5+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-container">
+                    <h3 class="skills-title">Tech Stack</h3>
+                    
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>R-Native</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-sass"></i>
+                            <span>SCSS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-ts" aria-hidden="true">TS</i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>Redis</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>Supabase</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Socket.IO</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-atom"></i>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact info card -->
+        <section id="contact" class="contact">
+            <div class="contact-container simple-contact">
+                <div class="section-title-container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-subtitle">Let's connect</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Email</h4>
+                                <a href="mailto:praiseoke215@gmail.com">praiseoke215@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Location</h4>
+                                <p>Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- site footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="#">JOAT</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Praise Oke. All rights reserved.</p>
+                <p>Designed & Built with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- back to top button -->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- js -->
+    <script src="script.js"></script>
+</body>
+</html> 
