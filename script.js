@@ -174,10 +174,12 @@ function initCustomCursor() {
     
     if (window.matchMedia("(pointer: fine)").matches && window.innerWidth > 768) {
         document.addEventListener('mousemove', (e) => {
-            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
             
             setTimeout(() => {
-                cursorFollower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
             }, 100);
         });
         
