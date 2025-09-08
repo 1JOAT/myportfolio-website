@@ -1,0 +1,36 @@
+.about {
+  padding: 5rem 2rem;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--color-text-muted);
+} */
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  display: block;
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}

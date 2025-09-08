@@ -1,0 +1,33 @@
+.contact {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.text {
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+}

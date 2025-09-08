@@ -1278,6 +1278,7 @@ section {
 }
 
 .current-project {
+    /* margin: 0px 12px; */
     margin-top: var(--space-10);
     background: linear-gradient(135deg, var(--color-surface) 0%, rgba(var(--color-primary-rgb), 0.1) 100%);
     border-radius: var(--radius-xl);
@@ -1902,7 +1903,15 @@ footer {
     .section-title {
         font-size: var(--font-size-3xl);
     }
-    
+/* .current-project {
+    margin: 0px 12px;
+    margin-top: var(--space-10);
+    background: linear-gradient(135deg, var(--color-surface) 0%, rgba(var(--color-primary-rgb), 0.1) 100%);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    position: relative;
+    overflow: hidden;
+} */
     .work, .about, .contact {
         padding: var(--space-8) var(--space-4);
     }

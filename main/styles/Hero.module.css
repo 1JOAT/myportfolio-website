@@ -1,0 +1,63 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 2rem;
+  background: var(--color-bg);
+}
+
+.content {
+  max-width: 600px;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.name {
+  display: block;
+  font-weight: bold;
+}
+
+.job {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+
+.description {
+  margin: 1rem 0 2rem;
+  color: var(--color-text-muted);
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+}
+
+.secondaryBtn {
+  border: 2px solid var(--color-primary);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+}
+
+.cvBtn {
+  background: var(--color-secondary);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+}
