@@ -1403,6 +1403,11 @@ body::before {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
+
+    /* Keep mobile nav transitions working */
+    .nav__menu {
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
 }
 
 /* DESKTOP ANIMATIONS - ONLY ENABLE ON LARGER SCREENS */

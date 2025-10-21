@@ -136,23 +136,13 @@ if (window.innerWidth > 768) {
     createCustomCursor();
 }
 
-// ==================== DISABLE ANIMATIONS ON MOBILE ====================
+// ==================== MOBILE DETECTION ====================
 // Check if mobile device or prefers reduced motion
 const isMobile = window.innerWidth <= 768;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Disable heavy animations entirely on mobile for performance
-if (isMobile || prefersReducedMotion) {
-    // Immediately make all hidden elements visible
-    document.querySelectorAll('.timeline__item, .project-card, .stat-card, .contact__info-item, .timeline__content, .skill-category').forEach(el => {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-        el.style.transition = 'none';
-    });
-
-    // Remove all intersection observer animations
-    return; // Skip all following animation code
-}
+// Store mobile state globally for use in other functions
+window.isMobileDevice = isMobile || prefersReducedMotion;
 
 // ==================== DESKTOP ONLY: INTERSECTION OBSERVER ANIMATIONS ====================
 if (!isMobile && !prefersReducedMotion) {
