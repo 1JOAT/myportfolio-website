@@ -1347,7 +1347,7 @@ body::before {
     }
 }
 
-/* ==================== PRODUCTION MODE ==================== */
+/* ==================== PRODUCTION MODE - ANTI-BLINKING FIX ==================== */
 /* Reduce heavy animations for production stability */
 @media screen and (prefers-reduced-motion: reduce) {
     *,
@@ -1359,17 +1359,66 @@ body::before {
     }
 }
 
-/* Always reduce certain animations in production to prevent blinking */
-.hero::before {
-    animation-duration: 12s; /* Slower for production */
+/* MOBILE BLINKING FIX - FORCE EVERYTHING VISIBLE ON MOBILE */
+@media screen and (max-width: 768px) {
+    /* Disable all fade-in animations on mobile */
+    .timeline__item,
+    .project-card,
+    .stat-card,
+    .stat-card--featured,
+    .contact__info-item,
+    .timeline__content,
+    .skill-category,
+    .hero__content,
+    .section__header,
+    .about__container,
+    .experience__container,
+    .stats__container,
+    .skills__container,
+    .contact__container,
+    section {
+        opacity: 1 !important;
+        transform: translateY(0) translateX(0) !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+    /* Disable all motion effects on mobile */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0ms !important;
+        transition-duration: 0ms !important;
+        animation-fill-mode: none !important;
+    }
+
+    /* No parallax on mobile */
+    .hero__visual,
+    .hero__image-bg {
+        transform: none !important;
+    }
+
+    /* No section transitions */
+    section {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
 }
 
-.timeline__content,
-.stat-card,
-.stat-card--featured,
-.project-card,
-.skill-category {
-    opacity: 1 !important; /* Override initial hidden state to prevent blinking */
+/* DESKTOP ANIMATIONS - ONLY ENABLE ON LARGER SCREENS */
+@media screen and (min-width: 769px) {
+    /* Always reduce certain animations in production to prevent blinking */
+    .hero::before {
+        animation-duration: 12s; /* Slower for production */
+    }
+
+    .timeline__content,
+    .stat-card,
+    .stat-card--featured,
+    .project-card,
+    .skill-category {
+        opacity: 1 !important; /* Override initial hidden state to prevent blinking */
+    }
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
@@ -1635,3 +1684,6 @@ textarea:focus-visible {
         background: black;
     }
 }
+
+/* ==================== REMOVED ELEMENTS ==================== */
+/* WhatsApp floating button and scroll-to-top button removed for cleaner interface */

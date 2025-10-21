@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     const navClose = document.getElementById('nav-close');
     const navLinks = document.querySelectorAll('.nav__link');
-    const scrollTopBtn = document.getElementById('scroll-top');
 
     // Sticky Header on Scroll
     let lastScroll = 0;
@@ -37,12 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.remove('scrolled');
         }
 
-        // Show/Hide Scroll to Top Button
-        if (currentScroll > 500) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
+
 
         lastScroll = currentScroll;
     });
@@ -84,13 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll to Top
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+
 });
 
 // ==================== CUSTOM CURSOR ====================
@@ -148,25 +136,45 @@ if (window.innerWidth > 768) {
     createCustomCursor();
 }
 
-// ==================== INTERSECTION OBSERVER ANIMATIONS ====================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
+// ==================== DISABLE ANIMATIONS ON MOBILE ====================
+// Check if mobile device or prefers reduced motion
+const isMobile = window.innerWidth <= 768;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+// Disable heavy animations entirely on mobile for performance
+if (isMobile || prefersReducedMotion) {
+    // Immediately make all hidden elements visible
+    document.querySelectorAll('.timeline__item, .project-card, .stat-card, .contact__info-item, .timeline__content, .skill-category').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+        el.style.transition = 'none';
     });
-}, observerOptions);
 
-// Observe elements
-document.querySelectorAll('.timeline__item, .project-card, .stat-card, .contact__info-item').forEach(el => {
-    observer.observe(el);
-});
+    // Remove all intersection observer animations
+    return; // Skip all following animation code
+}
+
+// ==================== DESKTOP ONLY: INTERSECTION OBSERVER ANIMATIONS ====================
+if (!isMobile && !prefersReducedMotion) {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements
+    document.querySelectorAll('.timeline__item, .project-card, .stat-card, .contact__info-item').forEach(el => {
+        observer.observe(el);
+    });
+}
 
 // ==================== PARALLAX EFFECT ====================
 const parallaxElements = document.querySelectorAll('.hero__visual, .hero__image-bg');
@@ -776,102 +784,5 @@ setTimeout(() => {
     document.body.classList.add('loaded');
 }, 100);
 
-// ==================== WHATSAPP FLOATING BUTTON DRAG ====================
-const whatsappFloat = document.getElementById('whatsapp-float');
-if (whatsappFloat) {
-    let isDragging = false;
-    let dragStartX = 0;
-    let dragStartY = 0;
-    let elementStartX = 0;
-    let elementStartY = 0;
-
-    whatsappFloat.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        dragStartX = e.clientX;
-        dragStartY = e.clientY;
-        const rect = whatsappFloat.getBoundingClientRect();
-        elementStartX = rect.left;
-        elementStartY = rect.top;
-        whatsappFloat.style.cursor = 'grabbing';
-        document.body.style.userSelect = 'none';
-        e.preventDefault();
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-
-        const deltaX = e.clientX - dragStartX;
-        const deltaY = e.clientY - dragStartY;
-
-        let newLeft = elementStartX + deltaX;
-        let newTop = elementStartY + deltaY;
-
-        // Keep within viewport bounds (with some margin)
-        const margin = 20;
-        const rect = whatsappFloat.getBoundingClientRect();
-        const maxX = window.innerWidth - rect.width - margin;
-        const maxY = window.innerHeight - rect.height - margin;
-
-        newLeft = Math.max(margin, Math.min(newLeft, maxX));
-        newTop = Math.max(margin, Math.min(newTop, maxY));
-
-        whatsappFloat.style.left = newLeft + 'px';
-        whatsappFloat.style.right = 'auto';
-        whatsappFloat.style.top = newTop + 'px';
-        whatsappFloat.style.bottom = 'auto';
-        whatsappFloat.style.transform = 'none';
-    });
-
-    document.addEventListener('mouseup', () => {
-        if (isDragging) {
-            isDragging = false;
-            whatsappFloat.style.cursor = 'grab';
-            document.body.style.userSelect = '';
-        }
-    });
-
-    // Touch events for mobile
-    whatsappFloat.addEventListener('touchstart', (e) => {
-        isDragging = true;
-        const touch = e.touches[0];
-        dragStartX = touch.clientX;
-        dragStartY = touch.clientY;
-        const rect = whatsappFloat.getBoundingClientRect();
-        elementStartX = rect.left;
-        elementStartY = rect.top;
-        e.preventDefault();
-    });
-
-    document.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        const touch = e.touches[0];
-
-        const deltaX = touch.clientX - dragStartX;
-        const deltaY = touch.clientY - dragStartY;
-
-        let newLeft = elementStartX + deltaX;
-        let newTop = elementStartY + deltaY;
-
-        const margin = 20;
-        const rect = whatsappFloat.getBoundingClientRect();
-        const maxX = window.innerWidth - rect.width - margin;
-        const maxY = window.innerHeight - rect.height - margin;
-
-        newLeft = Math.max(margin, Math.min(newLeft, maxX));
-        newTop = Math.max(margin, Math.min(newTop, maxY));
-
-        whatsappFloat.style.left = newLeft + 'px';
-        whatsappFloat.style.right = 'auto';
-        whatsappFloat.style.top = newTop + 'px';
-        whatsappFloat.style.bottom = 'auto';
-        whatsappFloat.style.transform = 'none';
-
-        e.preventDefault();
-    });
-
-    document.addEventListener('touchend', () => {
-        if (isDragging) {
-            isDragging = false;
-        }
-    });
-}
+/* ===== PORTFOLIO CLEANED AND OPTIMIZED ===== */
+console.log('🚀 Portfolio loaded successfully!');
