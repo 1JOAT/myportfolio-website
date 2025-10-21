@@ -1,27 +1,48 @@
+import data from "@/data/data.json";
 import styles from "@/styles/About.module.css";
 
 export default function About() {
-  return (
-    <section id="about" className={styles.about}>
-      <h2 className={styles.title}>About Me</h2>
-      <p>
-        I'm Praise Oke, aka JOAT — a passionate full stack developer with expertise in
-        building modern web & mobile applications. My focus is creating experiences
-        that balance performance, scalability, and creativity.
-      </p>
+  const { about, techStack } = data;
 
-      <div className={styles.stats}>
-        <div>
-          <span className={styles.value}>3+</span>
-          <span className={styles.label}>Years Experience</span>
-        </div>
-        <div>
-          <span className={styles.value}>15+</span>
-          <span className={styles.label}>Projects</span>
-        </div>
-        <div>
-          <span className={styles.value}>9+</span>
-          <span className={styles.label}>Happy Clients</span>
+  return (
+    <section id="about" className={`section ${styles.about}`}>
+      <div className="container">
+        <div className={styles.aboutGrid}>
+          <div className={styles.aboutContent}>
+            <div className="section-header">
+              <h2 className="section-title">{about.title}</h2>
+              <p className="section-subtitle">{about.subtitle}</p>
+            </div>
+
+            <div className={styles.content}>
+              {about.content.map((paragraph, index) => (
+                <p key={index} className={styles.paragraph}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className={styles.stats}>
+              {about.stats.map((stat, index) => (
+                <div key={index} className={styles.stat}>
+                  <span className={styles.statValue}>{stat.value}</span>
+                  <span className={styles.statLabel}>{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.skillsContainer}>
+            <h3 className={styles.skillsTitle}>Tech Stack</h3>
+
+            <div className={styles.techGrid}>
+              {techStack.map((tech) => (
+                <div key={tech} className={styles.techItem}>
+                  <span className={styles.techName}>{tech}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

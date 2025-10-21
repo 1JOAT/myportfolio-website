@@ -1,0 +1,114 @@
+{
+  "personal": {
+    "name": "Praise Oke",
+    "nickname": "JOAT",
+    "role": "Full Stack Developer",
+    "tagline": "I build modern apps and websites that grow businesses.",
+    "description": "From sleek websites to full-scale platforms, I turn your ideas into products people love to use. I focus on clean design, smooth performance, and results that make a difference.",
+    "email": "praiseoke215@gmail.com",
+    "location": "Nigeria",
+    "cv": "/Praise-Oke-CV.pdf"
+  },
+  "social": {
+    "github": "https://github.com/1JOAT",
+    "twitter": "https://x.com/1J0AT",
+    "whatsapp": "https://wa.link/875c39",
+    "linkedin": "https://www.linkedin.com/in/praise-oke-673a7823a/"
+  },
+  "projects": [
+    {
+      "id": "gasguru",
+      "title": "GasGuru Telegram Bot",
+      "description": "Built GasGuru — a real-time cryptocurrency tracking bot that provides instant Ethereum gas fees and token price information. This bot features interactive menus, multiple token support (ETH, BTC, SOL, MATIC, BNB, XRP, DOGE, ADA), and seamless integration with CoinGecko API for accurate price data. Users can easily monitor gas prices and track their favorite cryptocurrencies directly within Telegram.",
+      "url": "https://t.me/thegasguru_bot",
+      "type": "external",
+      "featured": true
+    },
+    {
+      "id": "etherlens",
+      "title": "Web3 Smart Wallet Analytics Platform",
+      "description": "Built EtherLens — a platform that transforms raw on-chain data into clear, digestible insights for everyday users and traders. It simplifies complex blockchain jargon, delivers real-time wallet analytics in milliseconds, and provides actionable metrics that actually make sense.",
+      "url": "https://the-ether-lens.vercel.app/",
+      "type": "external",
+      "featured": true
+    },
+    {
+      "id": "chatz",
+      "title": "AI-Native Chat Platform Development",
+      "description": "Built Chatz — a next-gen conversational platform designed for fast, intelligent, and engaging interactions. This MVP leverages Retrieval-Augmented Generation (RAG) and Qdrant for high-speed, context-aware chatting, integrates natural-feeling chat-to-chat flows, and features hyper-realistic text-to-speech that sounds truly human.",
+      "url": "https://chatz-frontend.onrender.com/",
+      "type": "external",
+      "featured": true
+    },
+    {
+      "id": "tabzen",
+      "title": "TabZen - Smart Tab Management",
+      "description": "A powerful Chrome extension that revolutionizes how you manage browser tabs. TabZen combines intelligent organization with a sleek interface to make tab management effortless and efficient.",
+      "url": "https://github.com/1JOAT/tabzen-extension",
+      "type": "github",
+      "featured": true
+    }
+  ],
+  "experience": [
+    {
+      "id": "marketsmate",
+      "title": "Software Engineer",
+      "company": "Marketsmate Enterprise",
+      "period": "May 2025 - Present",
+      "description": "Contributing to the development of innovative software solutions and collaborating with cross-functional teams to deliver high-quality products.",
+      "technologies": ["React", "Next.js", "TypeScript", "Paystack"]
+    },
+    {
+      "id": "landcraft",
+      "title": "Software Developer",
+      "company": "Landcraft",
+      "period": "2023 - May 2025",
+      "description": "Working as a software developer focusing on building scalable applications and leading development teams. Currently developing an advanced algorithm to optimize user experiences and system performance.",
+      "technologies": ["React", "Node.js", "TypeScript", "React-Native", "Redis", "Supabase"]
+    },
+    {
+      "id": "infinity-forex",
+      "title": "Software Developer",
+      "company": "Infinity Forex Academy",
+      "period": "2024 - Present",
+      "description": "Contributed to the development of multiple websites focusing on frontend and backend integration, Optimized database queries.",
+      "technologies": ["PHP", "Paystack", "Html", "CSS"]
+    }
+  ],
+  "about": {
+    "title": "About Me",
+    "subtitle": "My journey",
+    "content": [
+      "I'm Praise Oke, also known as JOAT, a passionate full stack developer with expertise in building modern web and mobile applications. My journey in tech began with a deep curiosity about how digital experiences are crafted, which led me to master both frontend and backend technologies.",
+      "With a strong focus on user experience and performance, I develop applications that not only meet business requirements but also delight users. I'm constantly learning and exploring new technologies to stay at the forefront of web development. My approach combines technical excellence with creative problem-solving, allowing me to build solutions that are both powerful and elegant.",
+      "Beyond coding, I'm passionate about creating tools that enhance productivity and user experience. This led me to develop TabZen, a Chrome extension that revolutionizes tab management, making it more intuitive and efficient for users to organize their browsing experience."
+    ],
+    "stats": [
+      {
+        "value": "3+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "15+",
+        "label": "Projects"
+      },
+      {
+        "value": "9+",
+        "label": "Happy Clients"
+      }
+    ]
+  },
+  "techStack": [
+    "HTML", "CSS", "JavaScript", "React", "Next.js", "React-Native",
+    "Node.js", "Express", "SCSS", "TypeScript", "Bootstrap", "Material UI",
+    "Claude", "Cursor", "Tailwind CSS", "Git", "GitHub", "PHP",
+    "Qdrant", "Redis", "MySQL", "PostgreSQL", "MongoDB", "Supabase",
+    "Socket.Io", "Redux"
+  ],
+  "navigation": [
+    { "name": "Home", "href": "#home" },
+    { "name": "Experience", "href": "#experience" },
+    { "name": "About", "href": "#about" },
+    { "name": "Contact", "href": "#contact" }
+  ]
+}

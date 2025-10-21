@@ -5,12 +5,13 @@ import Experience from "@/components/Experience";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import "@/app/globals.css";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main style={{ marginTop: '80px' }}>
         <Hero />
         <Projects />
         <Experience />
