@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Allow all major search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap location (update this URL to match your actual domain)
+Sitemap: https://joat.website/sitemap.xml
+
+

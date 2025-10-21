@@ -205,44 +205,6 @@ if (profession) {
     }, 800);
 }
 
-// ==================== CONTACT FORM HANDLING ====================
-const contactForm = document.getElementById('contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const btn = contactForm.querySelector('.btn');
-        const btnText = btn.querySelector('.btn__text');
-        const btnLoader = btn.querySelector('.btn__loader');
-
-        // Show loading state
-        btn.disabled = true;
-        btnText.style.display = 'none';
-        btnLoader.style.display = 'inline-block';
-
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-
-        // Simulate form submission (replace with actual API call)
-        try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
-
-            // Success
-            showNotification('Message sent successfully!', 'success');
-            contactForm.reset();
-        } catch (error) {
-            // Error
-            showNotification('Failed to send message. Please try again.', 'error');
-        } finally {
-            // Reset button state
-            btn.disabled = false;
-            btnText.style.display = 'inline';
-            btnLoader.style.display = 'none';
-        }
-    });
-}
 
 // ==================== NOTIFICATION SYSTEM ====================
 const showNotification = (message, type = 'success') => {
