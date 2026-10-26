@@ -12,6 +12,6 @@ User-agent: Slurp
 Allow: /
 
 # Sitemap location
-Sitemap: https://joat.website/sitemap.xml
+Sitemap: https://praiseoke.cv/sitemap.xml
 
 
